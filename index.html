@@ -17,6 +17,10 @@
   }
 </style>
 
+<audio id="aud">
+  <source src="k.mp3" type="audio/mpeg">
+</audio>
+
 <marquee direction="down">
 <pre>
 
@@ -38,3 +42,10 @@
 </marquee>
 
 <img src="pers.gif">
+
+<script>
+setInterval(() => {
+  var a = document.getElementsByTagName("audio")[0];
+  a.play();
+}, 250)
+</script>
