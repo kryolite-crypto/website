@@ -2,7 +2,11 @@
   body {
     margin: 0 0 0 0;
     overflow: hidden;
-    max-width: 100%;
+    position: relative;
+  }
+
+  body, html {
+    overflow: hidden;
     overflow-x: hidden;
   }
 
@@ -65,6 +69,16 @@
 <img src="pers.gif">
 
 <script>
+function preventMotion(event)
+{
+    window.scrollTo(0, 0);
+    event.preventDefault();
+    event.stopPropagation();
+}
+
+window.addEventListener("scroll", preventMotion, false);
+window.addEventListener("touchmove", preventMotion, false);
+
 setInterval(() => {
   var a = document.getElementsByTagName("audio")[0];
   a.play();
