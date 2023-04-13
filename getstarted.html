@@ -3,213 +3,66 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Kryolite</title>
+    <title>Get Started - Kryolite</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
     <script src="https://kit.fontawesome.com/3b2b6ab1af.js" crossorigin="anonymous"></script>
-    <style>
-      pre {
-        font-size: 4vw;
-        text-align: center;
-        line-height: 1;
-        background-color: white;
-      }
-
-      .m-t-25 {
-        margin-top: 25px;
-      }
-
-      .m-t-15 {
-        margin-top: 15px;
-      }
-
-      .m-b-5 {
-        margin-top: 25px;
-      }
-
-      .m-l-15 {
-        margin-left: 15px;
-      }
-
-      a {
-        padding: 0 2px;
-        color: hsl(217, 71%, 53%);
-      }
-
-      a:hover,
-      a:focus {
-        color: hsl(0, 0%, 21%);
-      }
-
-      .max-height {
-        height: 100%;
-      }
-
-      .to-bottom {
-        position: sticky;
-        bottom: 0;
-      }
-      
-      .is-very-small > .hero-body {
-        padding: 0.5rem;
-      }
-
-      .is-transparent-warning {
-        background-color: hsl(48, 100%, 67%, 69%);
-      }
-    </style>
+    <link rel="stylesheet" href="kryolite.css">
   </head>
   <body>
-  <pre>
+  <section>
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+      <div class="navbar-brand">
+        <a href="https://kryolite.io/">
+        <pre>
 █▄▀ █▀▄ ▀▄▀ ▄▀▄ █   █ ▀█▀ ██▀
 █ █ █▀▄  █  ▀▄▀ █▄▄ █  █  █▄▄
-  </pre>
-  <section>
-    <div class="container">
-      <nav class="level">
-        <div class="level-item">
-          <div>
-            <div class="title m-t-25">
-              How-to mine in 5 steps?
-            </div>
-            <div class="m-t-15">
-              1. Download wallet and miner for your platform
-            </div>
-            <div>
-              2. Launch wallet
-            </div>
-            <div>
-              3. Go to addresses tab
-            </div>
-            <div>
-              4. Right click on pre-generated address to copy the address
-            </div>
-            <div>
-              5. Keep wallet running and launch miner with command
-              <div class="m-l-15">
-                <code>
-                  miner --address kryo:5VWDAcZPXZRPJzBncuUCyeCVgJoEoDz7tWeB
-                </code>
-              </div>
-            </div>
-          </div>
-        </div>
-      </nav>
-    </div>
+        </pre>
+        </a>
+      </div>
+
+      <a class="navbar-item" href="download.html">
+        Downloads
+      </a>
+
+      <a class="navbar-item" href="getstarted.html">
+        Get Started
+      </a>
+    </nav>
   </section>
 
-  <section class="section m-t-25">
-    <div class="container">
-      <div class="columns is-centered">
-        <div class="column">
-          <div class="box max-height">
-            <nav class="level">
-              <div class="level-item has-text-centered">
-                <div>
-                  <i class="fa fa-windows fa-6x" aria-hidden="true"></i>
-                  <div class="title is-5 m-t-15 m-b-5">
-                    windows-x64
-                  </div>
-                  <div>
-                    <a href="#">cli</a>
-                  </div>
-                  <div>
-                    <a href="#">daemon</a>
-                  </div>
-                  <div>
-                    <a href="#">miner</a>
-                  </div>
-                  <div>
-                    <a href="#">wallet</a>
-                  </div>
-                </div>
-              </div>
-            </nav>
+  <section>
+    <div class="container m-t-25">
+    <div class="box">
+    <nav class="level m-l-25">
+      <div class="level-left">
+        <div>
+          <div class="title m-t-25">
+            How-to mine in 5 steps?
           </div>
-        </div>
-        <div class="column">
-          <div class="box">
-            <nav class="level">
-              <div class="level-item has-text-centered">
-                <div>
-                  <i class="fa fa-linux fa-6x" aria-hidden="true"></i>
-                  <div class="title is-5 m-t-25 m-b-5">
-                    linux-x64
-                  </div>
-                  <div>
-                    <a href="#">cli</a>
-                  </div>
-                  <div>
-                    <a href="#">daemon</a>
-                  </div>
-                  <div>
-                    <a href="#">miner</a>
-                  </div>
-                  <div>
-                    <a href="#">wallet</a>
-                  </div>
-                  <div class="title is-5 m-t-25 m-b-5">
-                    linux-arm64
-                  </div>
-                  <div>
-                    <a href="#">cli</a>
-                  </div>
-                  <div>
-                    <a href="#">daemon</a>
-                  </div>
-                  <div>
-                    <a href="#">miner</a>
-                  </div>
-                  <div>
-                    <a href="#">wallet</a>
-                  </div>
-                </div>
-              </div>
-            </nav>
+          <div class="m-t-15">
+            1. <a href="download.html">Download</a> wallet and miner for your platform
           </div>
-        </div>
-        <div class="column">
-          <div class="box">
-            <nav class="level">
-              <div class="level-item has-text-centered">
-                <div>
-                  <i class="fa fa-apple fa-6x" aria-hidden="true"></i>
-                  <div class="title is-5 m-t-25 m-b-5">
-                    macos-x64
-                  </div>
-                  <div>
-                    <a href="#">cli</a>
-                  </div>
-                  <div>
-                    <a href="#">daemon</a>
-                  </div>
-                  <div>
-                    <a href="#">miner</a>
-                  </div>
-                  <div>
-                    <a href="#">wallet</a>
-                  </div>
-                  <div class="title is-5 m-t-25 m-b-5">
-                    macos-arm64
-                  </div>
-                  <div>
-                    <a href="#">cli</a>
-                  </div>
-                  <div>
-                    <a href="#">daemon</a>
-                  </div>
-                  <div>
-                    <a href="#">miner</a>
-                  </div>
-                  <div>
-                    <a href="#">wallet</a>
-                  </div>
-                </div>
-              </div>
-            </nav>
+          <div>
+            2. Launch wallet
+          </div>
+          <div>
+            3. Go to addresses tab
+          </div>
+          <div>
+            4. Right click on pre-generated address to copy the address
+          </div>
+          <div>
+            5. Keep wallet running and launch miner with command
+            <div class="m-l-15">
+              <code>
+                miner --address kryo:5VWDAcZPXZRPJzBncuUCyeCVgJoEoDz7tWeB
+              </code>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </nav>
+  </div></div>
   </section>
 
   <section class="hero is-very-small is-transparent-warning to-bottom">
