@@ -1,5 +1,5 @@
-pre {
-    font-size: 1vw;
+pre.logo {
+    font-size: 12px;
     text-align: center;
     line-height: 1;
     background-color: white;
