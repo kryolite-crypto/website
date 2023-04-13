@@ -1,45 +1,10 @@
 <head>
   <meta name="viewport" content="user-scalable=no" />
 
-  <audio id="aud">
-    <source src="k.mp3" type="audio/mpeg">
-  </audio>
-
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
   <script src="https://kit.fontawesome.com/3b2b6ab1af.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="kryolite.css">
 
-  <style>
-    body {
-      margin: 0 0 0 0;
-      overflow: hidden;
-      position: relative;
-    }
-  
-    body, html {
-      overflow: hidden;
-      overflow-x: hidden;
-    }
-  
-    img {
-      position: absolute;
-      top: 0;
-      left: 30%;
-      width: 80%;
-  
-      -webkit-user-drag: none;
-      -khtml-user-drag: none;
-      -moz-user-drag: none;
-      -o-user-drag: none;
-      user-drag: none;
-    }
-  
-    pre.huge {
-      font-size: 4vw;
-      text-align: center;
-      background-color: white;
-    }
-  </style>
 </head>
 <body>
   <section>
@@ -62,62 +27,19 @@
       </a>
     </nav>
   </section>
-<marquee direction="down">
-<pre class="huge">
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-█▄▀ █▀▄ ▀▄▀ ▄▀▄ █   █ ▀█▀ ██▀
-█ █ █▀▄  █  ▀▄▀ █▄▄ █  █  █▄▄
-</pre>
-</marquee>
-
-<img src="pers.gif">
-
-<script>
-function preventMotion(event)
-{
-    window.scrollTo(0, 0);
-    event.preventDefault();
-    event.stopPropagation();
-}
-
-window.addEventListener("scroll", preventMotion, false);
-window.addEventListener("touchmove", preventMotion, false);
-
-setInterval(() => {
-  var a = document.getElementsByTagName("audio")[0];
-  a.play();
-}, 250)
-</script>
-
+  <section>
+    <div class="container is-fluid" style="margin-top: 30%">
+      <nav class="level">
+        <div class="level-item">
+          <!--div>
+            <img id="blocks" src="blocks-shuffle-3.svg" alt="Spinning blocks"/>
+          </div-->
+          <div class="title is-1">
+              <p class="text-shine">Preparing blobkchain</p>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </section>
 </body>

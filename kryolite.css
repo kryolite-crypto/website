@@ -54,3 +54,29 @@ pre.logo {
   .is-transparent-warning {
     background-color: hsl(48, 100%, 67%, 69%);
   }
+
+  #blocks {
+    transform: scale(15);
+    filter: invert(100%) sepia(3%) saturate(147%) hue-rotate(198deg) brightness(117%) contrast(92%);
+    position: absolute;
+    left: 48%;
+    top: -200;
+  }
+
+  @keyframes animate {
+    0% {
+      background-position: -500%;
+    }
+    100% {
+      background-position: 500%;
+    }
+  }
+  
+  .text-shine {
+    background: linear-gradient(90deg, #fff, #000, #fff);
+    background-repeat: no-repeat;
+    background-size: 80%;
+    animation: animate 5s linear infinite;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: rgba(255, 255, 255, 0);
+  }
