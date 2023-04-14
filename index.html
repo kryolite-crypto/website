@@ -36,7 +36,7 @@
           <div class="level-item">
             <div>
             <div class="title is-1">
-                <p class="pulsate center">Preparing blokchain</p>
+                <p id="text" class="pulsate center">Preparing blokchain</p>
             </div>
             <div class="title is-4">
               <p id="timer" class="pulsate center"></p>
@@ -55,6 +55,16 @@
 
   </body>
   <script>
+    const texts = [
+      "Preparing blockchain",
+      "Changing algorithm",
+      "Crafting UI",
+      "Fixing bugs",
+      "Consulting ChatGPT"
+    ];
+
+    let i = 0;
+
     function countdown() {
       const timeLeft = +new Date("2023-04-21 21:00:00+3") - +new Date();
       const daysLeft = Math.max(Math.floor(timeLeft / (1000 * 60 * 60 * 24)), 0);
@@ -64,6 +74,13 @@
       const timeLeftText = `${daysLeft} days ${hoursLeft} hours ${minutesLeft} minutes ${secondsLeft} seconds.`;
 
       document.getElementById("timer").innerHTML = timeLeftText;
+
+      if (i % 3 == 0) {
+        const ix = Math.random() * 100;
+        document.getElementById("text").innerHTML = texts[Math.floor(ix % 5)];
+      }
+
+      i++;
     }
 
     setInterval(countdown, 1000);
