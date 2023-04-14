@@ -56,7 +56,7 @@
   </body>
   <script>
     function countdown() {
-      const timeLeft = +new Date("2023-04-21 21:00:00") - +new Date();
+      const timeLeft = +new Date("2023-04-21 21:00:00+3") - +new Date();
       const daysLeft = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
       const hoursLeft = Math.floor((timeLeft / (1000 * 60 * 60)) % 24);
       const minutesLeft = Math.floor((timeLeft / 1000) / 60 % 60);
