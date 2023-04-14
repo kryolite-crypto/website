@@ -36,10 +36,10 @@
           <div class="level-item">
             <div>
             <div class="title is-1">
-                <p class="text-shine">Preparing blokchain</p>
+                <p class="pulsate center">Preparing blokchain</p>
             </div>
             <div class="title">
-              <p id="timer" class="text-shine"></p>
+              <p id="timer" class="pulsate center"></p>
             </div>
           </div>
           </div>
@@ -57,10 +57,11 @@
   <script>
     function countdown() {
       const timeLeft = +new Date("2023-04-21 21:00:00+3") - +new Date();
-      const daysLeft = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
-      const hoursLeft = Math.floor((timeLeft / (1000 * 60 * 60)) % 24);
-      const minutesLeft = Math.floor((timeLeft / 1000) / 60 % 60);
-      const timeLeftText = `${daysLeft} days ${hoursLeft} hours ${minutesLeft} minutes.`;
+      const daysLeft = Math.max(Math.floor(timeLeft / (1000 * 60 * 60 * 24)), 0);
+      const hoursLeft = Math.max(Math.floor((timeLeft / (1000 * 60 * 60)) % 24), 0);
+      const minutesLeft = Math.max(Math.floor((timeLeft / 1000) / 60 % 60), 0);
+      const secondsLeft = Math.max(Math.floor((timeLeft / 1000) % 60), 0);
+      const timeLeftText = `${daysLeft} days ${hoursLeft} hours ${minutesLeft} minutes ${secondsLeft} seconds.`;
 
       document.getElementById("timer").innerHTML = timeLeftText;
     }

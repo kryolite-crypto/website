@@ -1,86 +1,88 @@
 pre.logo {
-    font-size: 12px;
-    text-align: center;
-    line-height: 1;
-    background-color: white;
+  font-size: 12px;
+  text-align: center;
+  line-height: 1;
+  background-color: white;
+}
+
+.m-t-25 {
+  margin-top: 25px;
+}
+
+.m-t-15 {
+  margin-top: 15px;
+}
+
+.m-b-5 {
+  margin-top: 25px;
+}
+
+.m-l-15 {
+  margin-left: 15px;
+}
+
+.m-l-25 {
+  margin-left: 25px;
+}
+
+
+a {
+  padding: 0 2px;
+  color: hsl(217, 71%, 53%);
+}
+
+a:hover,
+a:focus {
+  color: hsl(0, 0%, 21%);
+}
+
+.max-height {
+  height: 100%;
+}
+
+.to-bottom {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.is-very-small>.hero-body {
+  padding: 0.5rem;
+}
+
+.is-transparent-warning {
+  background-color: hsl(48, 100%, 67%, 69%);
+}
+
+#blocks {
+  transform: scale(15);
+  filter: invert(100%) sepia(3%) saturate(147%) hue-rotate(198deg) brightness(117%) contrast(92%);
+  position: absolute;
+  left: 48%;
+  top: -200;
+}
+
+.pulsate {
+  -webkit-animation: pulsate 3s ease-in-out;
+  -webkit-animation-iteration-count: infinite;
+  opacity: 0.5;
+}
+
+@-webkit-keyframes pulsate {
+  0% {
+    opacity: 0.0;
   }
 
-  .m-t-25 {
-    margin-top: 25px;
+  50% {
+    opacity: 1.0;
   }
 
-  .m-t-15 {
-    margin-top: 15px;
+  100% {
+    opacity: 0.0;
   }
+}
 
-  .m-b-5 {
-    margin-top: 25px;
-  }
-
-  .m-l-15 {
-    margin-left: 15px;
-  }
-
-  .m-l-25 {
-    margin-left: 25px;
-  }
-
-
-  a {
-    padding: 0 2px;
-    color: hsl(217, 71%, 53%);
-  }
-
-  a:hover,
-  a:focus {
-    color: hsl(0, 0%, 21%);
-  }
-
-  .max-height {
-    height: 100%;
-  }
-
-  .to-bottom {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-  }
-  
-  .is-very-small > .hero-body {
-    padding: 0.5rem;
-  }
-
-  .is-transparent-warning {
-    background-color: hsl(48, 100%, 67%, 69%);
-  }
-
-  #blocks {
-    transform: scale(15);
-    filter: invert(100%) sepia(3%) saturate(147%) hue-rotate(198deg) brightness(117%) contrast(92%);
-    position: absolute;
-    left: 48%;
-    top: -200;
-  }
-
-  @keyframes animate {
-    0% {
-      background-position: -500%;
-    }
-    100% {
-      background-position: 500%;
-    }
-  }
-  
-  .text-shine {
-    background: linear-gradient(90deg, #fff, #000, #fff);
-    background-repeat: no-repeat;
-    background-size: 80%;
-    animation: animate 5s linear infinite;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: rgba(255, 255, 255, 0);
-  }
-
-  #timer {
-    text-align: center;
-  }
+.center {
+  text-align: center;
+}
