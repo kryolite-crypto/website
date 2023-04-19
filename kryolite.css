@@ -91,7 +91,7 @@ a:focus {
   color: #4a4a4a;
 }
 
-@media screen and (min-width: 560px) {
+@media screen and (min-width: 710px) {
   .navbar, .navbar-end, .navbar-menu, .navbar-start {
       align-items: stretch;
       display: flex;
