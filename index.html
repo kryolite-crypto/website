@@ -18,15 +18,26 @@
   █ █ █▀▄  █  ▀▄▀ █▄▄ █  █  █▄▄
           </pre>
           </a>
+          
+          <a class="navbar-item" href="download.html">
+            Downloads
+          </a>
+
+          <a class="navbar-item" href="getstarted.html">
+            Get Started
+          </a>
+
         </div>
 
-        <a class="navbar-item" href="download.html">
-          Downloads
-        </a>
+        <div class="navbar-end">
+          <a class="navbar-item" href="#">
+            <i class="fa-brands fa-discord black" aria-hidden="true"></i>
+          </a>
 
-        <a class="navbar-item" href="getstarted.html">
-          Get Started
-        </a>
+          <a class="navbar-item" href="https://github.com/kryolite-crypto/kryolite">
+            <i class="fa fa-github black" aria-hidden="true"></i>
+          </a>
+        </div>
       </nav>
     </section>
 
@@ -60,7 +71,8 @@
       "Changing algorithm",
       "Crafting UI",
       "Fixing bugs",
-      "Consulting ChatGPT"
+      "Consulting ChatGPT",
+      "Installing testnet"
     ];
 
     let i = 0;
@@ -87,5 +99,26 @@
 
     countdown();
 
+    document.addEventListener('DOMContentLoaded', () => {
+
+    // Get all "navbar-burger" elements
+    const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+    // Add a click event on each of them
+    $navbarBurgers.forEach( el => {
+      el.addEventListener('click', () => {
+
+        // Get the target from the "data-target" attribute
+        const target = el.dataset.target;
+        const $target = document.getElementById(target);
+
+        // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+        el.classList.toggle('is-active');
+        $target.classList.toggle('is-active');
+
+      });
+    });
+
+    });
   </script>
 </html>
