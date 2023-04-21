@@ -65,10 +65,10 @@
           <div class="level-item">
             <div>
               <div class="title is-1">
-                <p id="text" class="pulsate center">Preparing blokchain</p>
+                <p id="text">[TESTNET][ALPHA]</p>
               </div>
               <div class="title is-4">
-                <p id="timer" class="pulsate center"></p>
+                <p id="typed">></p>
               </div>
             </div>
           </div>
@@ -85,44 +85,39 @@
     </section>
   </body>
   <script>
-    const texts = [
-      "Preparing blockchain",
-      "Changing algorithm",
-      "Crafting UI",
-      "Fixing bugs",
-      "Consulting ChatGPT",
-      "Installing testnet"
-    ];
+    const fulltext = "now live";
 
     let i = 0;
+    let x = 0;
+    let id = 0;
 
-    function countdown() {
-      const timeLeft = +new Date("2023-04-21 21:00:00+3") - +new Date();
-      const daysLeft = Math.max(
-        Math.floor(timeLeft / (1000 * 60 * 60 * 24)),
-        0
-      );
-      const hoursLeft = Math.max(
-        Math.floor((timeLeft / (1000 * 60 * 60)) % 24),
-        0
-      );
-      const minutesLeft = Math.max(Math.floor((timeLeft / 1000 / 60) % 60), 0);
-      const secondsLeft = Math.max(Math.floor((timeLeft / 1000) % 60), 0);
-      const timeLeftText = `${daysLeft} days ${hoursLeft} hours ${minutesLeft} minutes ${secondsLeft} seconds.`;
-
-      document.getElementById("timer").innerHTML = timeLeftText;
-
-      if (i % 3 == 0) {
-        const ix = Math.random() * 100;
-        document.getElementById("text").innerHTML =
-          texts[Math.floor(ix % texts.length)];
+    function type() {
+      if (x >= fulltext.length) {
+        clearInterval(id);
+        return;
       }
+
+      let text = document.getElementById("typed").innerHTML;
+
+      if (i >= 35) {
+        document.getElementById("typed").innerHTML += fulltext.charAt(x);
+        x++;
+        return;
+      }
+
+      if (i % 10 == 0) {
+        text = '>';
+      } else if (i % 5 == 0) {
+        text = '>|'
+      }
+
+      document.getElementById("typed").innerHTML = text;
 
       i++;
     }
 
-    setInterval(countdown, 1000);
+    id = setInterval(type, 100);
 
-    countdown();
+    type();
   </script>
 </html>
