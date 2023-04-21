@@ -14,7 +14,7 @@ pre.logo {
 }
 
 .m-b-5 {
-  margin-top: 25px;
+  margin-bottom: 5px;
 }
 
 .m-l-15 {
@@ -91,7 +91,7 @@ a:focus {
   color: #4a4a4a;
 }
 
-@media screen and (min-width: 710px) {
+@media screen and (min-width: 760px) {
   .navbar, .navbar-end, .navbar-menu, .navbar-start {
       align-items: stretch;
       display: flex;

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Get Started - Kryolite</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
+    />
+    <script
+      src="https://kit.fontawesome.com/3b2b6ab1af.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="kryolite.css" />
+  </head>
+  <body>
+    <section>
+      <nav class="navbar" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+          <a href="https://kryolite.io/">
+            <pre class="logo">
+█▄▀ █▀▄ ▀▄▀ ▄▀▄ █   █ ▀█▀ ██▀
+█ █ █▀▄  █  ▀▄▀ █▄▄ █  █  █▄▄
+          </pre
+            >
+          </a>
+
+          <a class="navbar-item" href="docs.html">
+            Docs
+          </a>
+
+          <a class="navbar-item" href="download.html">
+            Downloads
+          </a>
+
+          <a class="navbar-item" href="getstarted.html">
+            Get Started
+          </a>
+
+          <a class="navbar-item" href="https://kryolite-crypto.github.io/explorer/">
+            Explorer
+          </a>
+
+          <a class="navbar-item" href="https://kryolite-crypto.github.io/kryolottery/?address=kryo:5VWWgFqhghrZvPmmXa48ajnd7vTawvYgbT4f">
+            Lottery
+          </a>
+
+        </div>
+
+        <div class="navbar-end">
+          <a class="navbar-item" href="#">
+            <i class="fa-brands fa-discord black" aria-hidden="true"></i>
+          </a>
+
+          <a class="navbar-item" href="https://github.com/kryolite-crypto/kryolite">
+            <i class="fa fa-github black" aria-hidden="true"></i>
+          </a>
+        </div>
+      </nav>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="columns">
+          <div class="column is-one-fifth">
+            <div class="container max-height">
+              <aside class="menu">
+                <p class="menu-label">
+                  Node
+                </p>
+                <ul class="menu-list">
+                  <li>
+                    <a href="#endpointconfiguration">Endpoint Configuration</a>
+                    <ul>
+                      <li><a href="#fixedport">Fixed Port</a></li>
+                      <li><a href="#localhost">Localhost only</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="#publicurl">Public URL</a></li>
+                  <li>
+                    <a href="#ssl">SSL Configuration</a>
+                    <ul>
+                      <li><a href="#letsencrytp">Let's Encrypt</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="#upnp">UPNP</a></li>
+                </ul>
+                <p class="menu-label">
+                  Miner
+                </p>
+                <ul class="menu-list">
+                  <li><a href="#minersettings">Settings</a></li>
+                </ul>
+              </aside>
+            </div>
+          </div>
+          <div class="column" style="margin-bottom: 100px;">
+
+            <section>
+              <div class="container">
+                <div id="node" class="title is-4 m-t-15 m-b-5">Node</div>
+                Node refers to daemon or wallet. By default node assigns free port automatically and tries to open incoming port using UPNP.
+                
+                <div id="endpointconfiguration" class="title is-5 m-t-15 m-b-5">Endpoint configuration</div>
+                Node uses standard <a href="https://learn.microsoft.com/en-us/aspnet/core/fundamentals/servers/kestrel/endpoints?view=aspnetcore-7.0#configureiconfiguration">.NET endpoint configuration parameters</a> defined in <code>appsettings.json</code>. Multiple endpoints can be used each with different ip address binding.
+
+                <div id="fixedport" class="title is-6 m-t-15 m-b-5">Fixed port</div>
+                To set fixed port, open <code>appsettings.json</code> and locate default endpoint configuration such as
+                <pre><code>"Http4": {
+  "Url": "http://0.0.0.0:0"
+}</code></pre>
+                and change it to
+                <pre><code>"Http4": {
+  "Url": "http://0.0.0.0:5000"
+}</code></pre>
+              restart node and new port will be used and announced to network.
+              </div>
+
+              <div id="localhost" class="title is-6 m-t-15 m-b-5">Fixed port</div>
+              To make your node to listen localhost only, open <code>appsettings.json</code> and change endpoint url to 127.0.0.1
+              <pre><code>"Http4": {
+  "Url": "http://127.0.0.1:0"
+}</code></pre>
+              You might also want to <a href="#publicurl">disable UPNP.</a>
+
+              <div id="publicurl" class="title is-6 m-t-15 m-b-5">Public URL</div>
+              If you have public DNS A record for your node, use this property to broadcast it to other nodes. <b>This is required while using SSL.</b>
+              <pre><code>"PublicUrl": "https://testnet-1.kryolite.io"</code></pre>
+
+              <div id="ssl" class="title is-5 m-t-15 m-b-5">SSL Configuration</div>
+              For SSL Configuration you need to set Public URL to match Subject Name in certificate. <a>Certificate needs to be configured in appsettings.json</a>
+
+              <div id="ssl" class="title is-6 m-t-15 m-b-5">Let's Encrypt</div>
+              Node also has built-in support for Let's Encrypt certificates with <a href="https://github.com/natemcmaster/LettuceEncrypt">LettuceEncrypt</a> library.
+              To enable Let's Encrypt add following configuration to <code>appsettings.json</code>
+              <pre><code>"LettuceEncrypt": {
+  // Set this to automatically accept the terms of service of your certificate authority.
+  // If you don't set this in config, you will need to press "y" whenever the application starts
+  "AcceptTermsOfService": true,
+
+  // You must specify at least one domain name
+  "DomainNames": [ "example.com" ],
+
+  // You must specify an email address to register with the certificate authority
+  "EmailAddress": "it-admin@example.com"
+}</code></pre>
+              DomainNames parameter must match <code>PublicUrl</code>.
+
+              <div id="miner" class="title is-4 m-t-15 m-b-5">Miner</div>
+                By default miner uses mDNS autodiscovery to find node to mine against
+              <div id="minersettings" class="title is-5 m-t-15 m-b-5">Settings</div>
+                <div><code>--address</code> Wallet address (required)</div>
+                <div><code>--url</code> Node url to mine against</div>
+                <div><code>--threads</code> Thread count [default: 1]</div>
+                <div><code>--throttle</code> Milliseconds to sleep between hashes</div>
+                <div><code>--help</code> Show help and usage information</div>
+              </div>
+
+            </section>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="hero is-very-small is-transparent-warning to-bottom">
+      <div class="hero-body">
+        <b>WARNING</b> This is experimental project. There will be issues and
+        testnet will be rolled back as needed. API should be considered unstable
+        and subject to change.
+      </div>
+    </section>
+  </body>
+</html>
