@@ -147,6 +147,10 @@
 }</code></pre>
               DomainNames parameter must match <code>PublicUrl</code>.
 
+              <div id="upnp" class="title is-6 m-t-15 m-b-5">UPNP</div>
+              UPNP is enabled by default. If you see UPNP related errors during node startup it might mean your router does not support UPNP or UPNP is disabled. You may disable UPNP in <code>appsettings.json</code>
+              <pre><code>"EnableUPNP": false</code></pre>
+
               <div id="miner" class="title is-4 m-t-15 m-b-5">Miner</div>
                 By default miner uses mDNS autodiscovery to find node to mine against
               <div id="minersettings" class="title is-5 m-t-15 m-b-5">Settings</div>
