@@ -64,3 +64,8 @@ footer.page-footer {
 .custom-container {
   padding: 20px;
 }
+
+.card-title {
+  font-weight: bold;
+  text-align: center;
+}
