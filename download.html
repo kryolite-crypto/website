@@ -1,176 +1,168 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Downloads - Kryolite</title>
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
-    />
-    <script
-      src="https://kit.fontawesome.com/3b2b6ab1af.js"
-      crossorigin="anonymous"
-    ></script>
-    <link rel="stylesheet" href="kryolite.css" />
-  </head>
-  <body>
-    <section>
-      <nav class="navbar" role="navigation" aria-label="main navigation">
-        <div class="navbar-brand">
-          <a href="https://kryolite.io/">
-            <pre class="logo">
-█▄▀ █▀▄ ▀▄▀ ▄▀▄ █   █ ▀█▀ ██▀
-█ █ █▀▄  █  ▀▄▀ █▄▄ █  █  █▄▄
-          </pre
-            >
-          </a>
-          
-          <a class="navbar-item" href="docs.html">
-            Docs
-          </a>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Kryolite</title>
 
-          <a class="navbar-item" href="download.html">
-            Downloads
-          </a>
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+</head>
+<body>
+  <nav class="black" role="navigation">
+    <div class="nav-wrapper container">
+      <a id="logo-container" href="https://kryolite.io" class="brand-logo">KRYOLITE</a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="docs.html">Docs</a></li>
+        <li><a href="download.html">Downloads</a></li>
+        <li><a href="getstarted.html">Get Started</a></li>
+        <li><a href="https://kryolite-crypto.github.io/kryolottery/?address=kryo:5VX6ezNScRgzVurn3vVgosHsgpcqismWYm3o">Lottery</a></li>
+        <li><a href="https://kryolite-crypto.github.io/explorer/">Explorer</a></li>
+      </ul>
+      <ul id="nav-mobile" class="sidenav">
+        <li><a href="docs.html">Docs</a></li>
+        <li><a href="download.html">Downloads</a></li>
+        <li><a href="getstarted.html">Get Started</a></li>
+        <li><a href="https://kryolite-crypto.github.io/kryolottery/?address=kryo:5VX6ezNScRgzVurn3vVgosHsgpcqismWYm3o">Lottery</a></li>
+        <li><a href="https://kryolite-crypto.github.io/explorer/">Explorer</a></li>
+      </ul>
+      <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+    </div>
+  </nav>
 
-          <a class="navbar-item" href="https://kryolite-crypto.github.io/explorer/">
-            Explorer
-          </a>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script>
+    $(document).ready(function(){
+      $('.sidenav').sidenav();
+    });
+  </script>
 
-          <a class="navbar-item" href="https://kryolite-crypto.github.io/kryolottery/?address=kryo:5VX6ezNScRgzVurn3vVgosHsgpcqismWYm3o">
-            Lottery
-          </a>
+  <style>
+    body {
+      background-color: #1c1c1c; /* Set the background color to a dark shade */
+      color: #ffffff; /* Set the text color to white */
+    }
 
-          <a class="navbar-item" href="getstarted.html">
-            Get Started
-          </a>
+    a {
+      color: #07a151; /* Set the color of links to white */
+    }
 
-        </div>
+    /* Override Materialize CSS classes for dark theme */
+    .card, .navbar, .sidenav {
+      background-color: #333333;
+    }
+    
+    .card-title, .card-content {
+      color: #ffffff;
+    }
+  </style>
+</head>
 
-        <div class="navbar-end">
-          <a class="navbar-item" href="https://discord.gg/QWJvKPuC">
-            <i class="fa-brands fa-discord black" aria-hidden="true"></i>
-          </a>
-
-          <a class="navbar-item" href="https://github.com/kryolite-crypto/kryolite">
-            <i class="fa fa-github black" aria-hidden="true"></i>
-          </a>
-        </div>
-      </nav>
-    </section>
-
-    <section class="section m-t-25">
-      <div class="container">
-        <div class="columns is-centered">
-          <div class="column">
-            <div class="box max-height">
-              <nav class="level">
-                <div class="level-item has-text-centered">
-                  <div>
-                    <i class="fa fa-windows fa-6x" aria-hidden="true"></i>
-                    <div class="title is-5 m-t-25 m-b-5">windows-x64</div>
-                    <div>
-                      <a href="https://github.com/kryolite-crypto/kryolite/releases/latest/download/kryolite-kryolite-win-x64.zip">cli</a>
-                    </div>
-                    <div>
-                      <a href="https://github.com/kryolite-crypto/kryolite/releases/latest/download/kryolite-daemon-win-x64.zip">daemon</a>
-                    </div>
-                    <div>
-                      <a href="https://github.com/kryolite-crypto/kryolite/releases/latest/download/kryolite-miner-win-x64.zip">miner</a>
-                    </div>
-                    <div>
-                      <a href="https://github.com/kryolite-crypto/kryolite/releases/latest/download/kryolite-wallet-win-x64.zip">wallet</a>
-                    </div>
-                  </div>
+    <body>
+      <section class="section">
+        <div class="container">
+          <div class="row">
+            <div class="col s12 m4">
+              <div class="card">
+                <div class="card-content center-align">
+                  <i class="material-icons large">desktop_windows</i>
+                  <span class="card-title">WINDOWS-x64</span>
+                  <p>
+                    <a href="https://github.com/kryolite-crypto/kryolite/releases/latest/download/kryolite-kryolite-win-x64.zip">cli</a>
+                  </p>
+                  <p>
+                    <a href="https://github.com/kryolite-crypto/kryolite/releases/latest/download/kryolite-daemon-win-x64.zip">daemon</a>
+                  </p>
+                  <p>
+                    <a href="https://github.com/kryolite-crypto/kryolite/releases/latest/download/kryolite-miner-win-x64.zip">miner</a>
+                  </p>
+                  <p>
+                    <a href="https://github.com/kryolite-crypto/kryolite/releases/latest/download/kryolite-wallet-win-x64.zip">wallet</a>
+                  </p>
                 </div>
-              </nav>
+              </div>
             </div>
-          </div>
-          <div class="column">
-            <div class="box">
-              <nav class="level">
-                <div class="level-item has-text-centered">
-                  <div>
-                    <i class="fa fa-linux fa-6x" aria-hidden="true"></i>
-                    <div class="title is-5 m-t-25 m-b-5">linux-x64</div>
-                    <div>
-                      <a href="https://github.com/kryolite-crypto/kryolite/releases/latest/download/kryolite-kryolite-linux-x64.zip">cli</a>
-                    </div>
-                    <div>
-                      <a href="https://github.com/kryolite-crypto/kryolite/releases/latest/download/kryolite-daemon-linux-x64.zip">daemon</a>
-                    </div>
-                    <div>
-                      <a href="https://github.com/kryolite-crypto/kryolite/releases/latest/download/kryolite-miner-linux-x64.zip">miner</a>
-                    </div>
-                    <div>
-                      <a href="https://github.com/kryolite-crypto/kryolite/releases/latest/download/kryolite-wallet-linux-x64.zip">wallet</a>
-                    </div>
-                    <div class="title is-5 m-t-25 m-b-5">linux-arm64</div>
-                    <div>
-                      <a href="https://github.com/kryolite-crypto/kryolite/releases/latest/download/kryolite-kryolite-linux-arm64.zip">cli</a>
-                    </div>
-                    <div>
-                      <a href="https://github.com/kryolite-crypto/kryolite/releases/latest/download/kryolite-daemon-linux-arm64.zip">daemon</a>
-                    </div>
-                    <div>
-                      <a href="https://github.com/kryolite-crypto/kryolite/releases/latest/download/kryolite-miner-linux-arm64.zip">miner</a>
-                    </div>
-                    <div>
-                      <a href="https://github.com/kryolite-crypto/kryolite/releases/latest/download/kryolite-wallet-linux-arm64.zip">wallet</a>
-                    </div>
-                  </div>
+            <div class="col s12 m4">
+              <div class="card">
+                <div class="card-content center-align">
+                  <i class="material-icons large">computer</i>
+                  <span class="card-title">LINUX-x64</span>
+                  <p>
+                    <a href="https://github.com/kryolite-crypto/kryolite/releases/latest/download/kryolite-kryolite-linux-x64.zip">cli</a>
+                  </p>
+                  <p>
+                    <a href="https://github.com/kryolite-crypto/kryolite/releases/latest/download/kryolite-daemon-linux-x64.zip">daemon</a>
+                  </p>
+                  <p>
+                    <a href="https://github.com/kryolite-crypto/kryolite/releases/latest/download/kryolite-miner-linux-x64.zip">miner</a>
+                  </p>
+                  <p>
+                    <a href="https://github.com/kryolite-crypto/kryolite/releases/latest/download/kryolite-wallet-linux-x64.zip">wallet</a>
+                  </p>
+                  <span class="card-title">LINUX-arm64</span>
+                  <p>
+                    <a href="https://github.com/kryolite-crypto/kryolite/releases/latest/download/kryolite-kryolite-linux-arm64.zip">cli</a>
+                  </p>
+                  <p>
+                    <a href="https://github.com/kryolite-crypto/kryolite/releases/latest/download/kryolite-daemon-linux-arm64.zip">daemon</a>
+                  </p>
+                  <p>
+                    <a href="https://github.com/kryolite-crypto/kryolite/releases/latest/download/kryolite-miner-linux-arm64.zip">miner</a>
+                  </p>
+                  <p>
+                    <a href="https://github.com/kryolite-crypto/kryolite/releases/latest/download/kryolite-wallet-linux-arm64.zip">wallet</a>
+                  </p>
                 </div>
-              </nav>
+              </div>
             </div>
-          </div>
-          <div class="column">
-            <div class="box">
-              <nav class="level">
-                <div class="level-item has-text-centered">
-                  <div>
-                    <i class="fa fa-apple fa-6x" aria-hidden="true"></i>
-                    <div class="title is-5 m-t-25 m-b-5">macos-x64</div>
-                    <div>
-                      <a href="https://github.com/kryolite-crypto/kryolite/releases/latest/download/kryolite-kryolite-mac-x64.zip">cli</a>
-                    </div>
-                    <div>
-                      <a href="https://github.com/kryolite-crypto/kryolite/releases/latest/download/kryolite-daemon-mac-x64.zip">daemon</a>
-                    </div>
-                    <div>
-                      <a href="https://github.com/kryolite-crypto/kryolite/releases/latest/download/kryolite-miner-mac-x64.zip">miner</a>
-                    </div>
-                    <div>
-                      <a href="https://github.com/kryolite-crypto/kryolite/releases/latest/download/kryolite-wallet-mac-x64.zip">wallet</a>
-                    </div>
-                    <div class="title is-5 m-t-25 m-b-5">macos-arm64</div>
-                    <div>
-                      <a href="https://github.com/kryolite-crypto/kryolite/releases/latest/download/kryolite-kryolite-mac-arm64.zip">cli</a>
-                    </div>
-                    <div>
-                      <a href="https://github.com/kryolite-crypto/kryolite/releases/latest/download/kryolite-daemon-mac-arm64.zip">daemon</a>
-                    </div>
-                    <div>
-                      <a href="https://github.com/kryolite-crypto/kryolite/releases/latest/download/kryolite-miner-mac-arm64.zip">miner</a>
-                    </div>
-                    <div>
-                      <a href="https://github.com/kryolite-crypto/kryolite/releases/latest/download/kryolite-wallet-mac-arm64.zip">wallet</a>
-                    </div>
-                  </div>
+            <div class="col s12 m4">
+              <div class="card">
+                <div class="card-content center-align">
+                  <i class="material-icons large">desktop_mac</i>
+                  <span class="card-title">MACOS-x64</span>
+                  <p>
+                    <a href="https://github.com/kryolite-crypto/kryolite/releases/latest/download/kryolite-kryolite-mac-x64.zip">cli</a>
+                  </p>
+                  <p>
+                    <a href="https://github.com/kryolite-crypto/kryolite/releases/latest/download/kryolite-daemon-mac-x64.zip">daemon</a>
+                  </p>
+                  <p>
+                    <a href="https://github.com/kryolite-crypto/kryolite/releases/latest/download/kryolite-miner-mac-x64.zip">miner</a>
+                  </p>
+                  <p>
+                    <a href="https://github.com/kryolite-crypto/kryolite/releases/latest/download/kryolite-wallet-mac-x64.zip">wallet</a>
+                  </p>
+                  <span class="card-title">MACOS-arm64</span>
+                  <p>
+                    <a href="https://github.com/kryolite-crypto/kryolite/releases/latest/download/kryolite-kryolite-mac-arm64.zip">cli</a>
+                  </p>
+                  <p>
+                    <a href="https://github.com/kryolite-crypto/kryolite/releases/latest/download/kryolite-daemon-mac-arm64.zip">daemon</a>
+                  </p>
+                  <p>
+                    <a href="https://github.com/kryolite-crypto/kryolite/releases/latest/download/kryolite-miner-mac-arm64.zip">miner</a>
+                  </p>
+                  <p>
+                    <a href="https://github.com/kryolite-crypto/kryolite/releases/latest/download/kryolite-wallet-mac-arm64.zip">wallet</a>
+                  </p>
                 </div>
-              </nav>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
-
-    <section class="hero is-very-small is-transparent-warning to-bottom">
-      <div class="hero-body">
-        <b>WARNING</b> This is experimental project. There will be issues and
-        testnet will be rolled back as needed. API should be considered unstable
-        and subject to change.
-      </div>
-    </section>
-  </body>
-</html>
+      </section>
+  
+      <section class="section">
+        <div class="container">
+          <div class="card-panel red white-text">
+            <b>WARNING</b> This is an experimental project. There will be issues and testnet will be rolled back as needed. API should be considered unstable and subject to change.
+          </div>
+        </div>
+      </section>
+    </body>
+  </html>
+  
+  

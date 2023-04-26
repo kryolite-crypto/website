@@ -1,104 +1,96 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Get Started - Kryolite</title>
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
-    />
-    <script
-      src="https://kit.fontawesome.com/3b2b6ab1af.js"
-      crossorigin="anonymous"
-    ></script>
-    <link rel="stylesheet" href="kryolite.css" />
-  </head>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Kryolite</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+</head>
+<body>
+  <nav class="black" role="navigation">
+    <div class="nav-wrapper container">
+      <a id="logo-container" href="https://kryolite.io" class="brand-logo">KRYOLITE</a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="docs.html">Docs</a></li>
+        <li><a href="download.html">Downloads</a></li>
+        <li><a href="getstarted.html">Get Started</a></li>
+        <li><a href="https://kryolite-crypto.github.io/kryolottery/?address=kryo:5VX6ezNScRgzVurn3vVgosHsgpcqismWYm3o">Lottery</a></li>
+        <li><a href="https://kryolite-crypto.github.io/explorer/">Explorer</a></li>
+      </ul>
+      <ul id="nav-mobile" class="sidenav">
+        <li><a href="docs.html">Docs</a></li>
+        <li><a href="download.html">Downloads</a></li>
+        <li><a href="getstarted.html">Get Started</a></li>
+        <li><a href="https://kryolite-crypto.github.io/kryolottery/?address=kryo:5VX6ezNScRgzVurn3vVgosHsgpcqismWYm3o">Lottery</a></li>
+        <li><a href="https://kryolite-crypto.github.io/explorer/">Explorer</a></li>
+      </ul>
+      <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+    </div>
+  </nav>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script>
+    $(document).ready(function(){
+      $('.sidenav').sidenav();
+    });
+  </script>
+  <style>
+    body {
+      background-color: #1c1c1c; /* Set the background color to a dark shade */
+      color: #ffffff; /* Set the text color to white */
+    }
+
+    a {
+      color: #07a151; /* Set the color of links to white */
+    }
+
+    /* Override Materialize CSS classes for dark theme */
+    .card, .navbar, .sidenav {
+      background-color: #333333;
+    }
+    
+    .card-title, .card-content {
+      color: #ffffff;
+    }
+  </style>
+
   <body>
     <section>
-      <nav class="navbar" role="navigation" aria-label="main navigation">
-        <div class="navbar-brand">
-          <a href="https://kryolite.io/">
-            <pre class="logo">
-█▄▀ █▀▄ ▀▄▀ ▄▀▄ █   █ ▀█▀ ██▀
-█ █ █▀▄  █  ▀▄▀ █▄▄ █  █  █▄▄
-          </pre
-            >
-          </a>
-          
-          <a class="navbar-item" href="docs.html">
-            Docs
-          </a>
-
-          <a class="navbar-item" href="download.html">
-            Downloads
-          </a>
-
-          <a class="navbar-item" href="https://kryolite-crypto.github.io/explorer/">
-            Explorer
-          </a>
-
-          <a class="navbar-item" href="https://kryolite-crypto.github.io/kryolottery/?address=kryo:5VX6ezNScRgzVurn3vVgosHsgpcqismWYm3o">
-            Lottery
-          </a>
-
-          <a class="navbar-item" href="getstarted.html">
-            Get Started
-          </a>
-
-        </div>
-
-        <div class="navbar-end">
-          <a class="navbar-item" href="https://discord.gg/QWJvKPuC">
-            <i class="fa-brands fa-discord black" aria-hidden="true"></i>
-          </a>
-
-          <a class="navbar-item" href="https://github.com/kryolite-crypto/kryolite">
-            <i class="fa fa-github black" aria-hidden="true"></i>
-          </a>
-        </div>
-      </nav>
-    </section>
-
-    <section>
-      <div class="container m-t-25">
-        <nav class="level m-l-25">
-          <div class="level-left">
-            <div>
-              <div class="title m-t-25">
-                How-to mine in 5 steps?
-              </div>
-              <div class="m-t-15">
-                1. <a href="download.html">Download</a> wallet and miner for your platform
-              </div>
-              <div>
-                2. Launch wallet
-              </div>
-              <div>
-                3. Go to addresses tab
-              </div>
-              <div>
-                4. Right click on pre-generated address to copy the address
-              </div>
-              <div>
-                5. Keep wallet running and launch miner with command
-                <div class="m-l-15">
+      <div class="container z-depth-2">
+        <div class="row">
+          <div class="col s12">
+            <h4 class="m-t-25">How-to mine in 5 steps?</h4>
+            <ol>
+              <li>
+                <a href="download.html">Download</a> wallet and miner for your platform
+              </li>
+              <li>Launch wallet</li>
+              <li>Go to addresses tab</li>
+              <li>Right click on pre-generated address to copy the address</li>
+              <li>
+                Keep wallet running and launch miner with command
+                <blockquote>
                   <code>
-                    miner --address kryo:5VWDAcZPXZRPJzBncuUCyeCVgJoEoDz7tWeB
+                    kryolite-miner --address kryo:5VWDAcZPXZRPJzBncuUCyeCVgJoEoDz7tWeB
                   </code>
-                </div>
-              </div>
-            </div>
+                </blockquote>
+              </li>
+            </ol>
           </div>
-        </nav>
+        </div>
       </div>
     </section>
 
-    <section class="hero is-very-small is-transparent-warning to-bottom">
-      <div class="hero-body">
-        <b>WARNING</b> This is experimental project. There will be issues and
-        testnet will be rolled back as needed. API should be considered unstable
-        and subject to change.
+    <section>
+      <div class="container">
+        <div class="card-panel red white-text">
+          <b>WARNING</b> This is an experimental project. There will be issues and testnet will be rolled back as needed. API should be considered unstable and subject to change.
+        </div>
       </div>
     </section>
   </body>
