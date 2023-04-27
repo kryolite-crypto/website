@@ -7,30 +7,48 @@
 
   <!-- CSS  -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
 </head>
 <body>
   <nav class="black" role="navigation">
     <div class="nav-wrapper container">
       <a id="logo-container" href="https://kryolite.io" class="brand-logo">KRYOLITE</a>
-      <ul class="right hide-on-med-and-down">
-        <li><a href="docs.html">Docs</a></li>
-        <li><a href="download.html">Downloads</a></li>
-        <li><a href="getstarted.html">Get Started</a></li>
-        <li><a href="https://kryolite-crypto.github.io/kryolottery/?address=kryo:5VX6ezNScRgzVurn3vVgosHsgpcqismWYm3o">Lottery</a></li>
-        <li><a href="https://kryolite-crypto.github.io/explorer/">Explorer</a></li>
+      <ul class="right">
+        <li>
+          <a class="dropdown-trigger" href="#" data-target="dropdown-menu">Menu<i class="material-icons right">arrow_drop_down</i></a>
+          <ul id="dropdown-menu" class="dropdown-content">
+            <li><a href="docs.html"><i class="material-icons left">description</i>Docs</a></li>
+            <li><a href="download.html"><i class="material-icons left">get_app</i>Downloads</a></li>
+            <li><a href="getstarted.html"><i class="material-icons left">play_circle_outline</i>Get Started</a></li>
+            <li><a href="https://kryolite-crypto.github.io/kryolottery/?address=kryo:5VX6ezNScRgzVurn3vVgosHsgpcqismWYm3o"><i class="material-icons left">casino</i>Lottery</a></li>
+            <li><a href="https://kryolite-crypto.github.io/explorer/"><i class="material-icons left">search</i>Explorer</a></li>            
+          </ul>
+        </li>
       </ul>
-      <ul id="nav-mobile" class="sidenav">
-        <li><a href="docs.html">Docs</a></li>
-        <li><a href="download.html">Downloads</a></li>
-        <li><a href="getstarted.html">Get Started</a></li>
-        <li><a href="https://kryolite-crypto.github.io/kryolottery/?address=kryo:5VX6ezNScRgzVurn3vVgosHsgpcqismWYm3o">Lottery</a></li>
-        <li><a href="https://kryolite-crypto.github.io/explorer/">Explorer</a></li>
-      </ul>
-      <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
     </div>
   </nav>
+
+  <!-- Include the Materialize JavaScript library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  
+  <script>
+    // Initialize dropdown menu
+    document.addEventListener('DOMContentLoaded', function() {
+      var dropdowns = document.querySelectorAll('.dropdown-trigger');
+      var dropdownOptions = {
+        inDuration: 300,
+        outDuration: 225,
+        hover: false,
+        coverTrigger: false,
+        alignment: 'right',
+        constrainWidth: false
+      };
+      var dropdownInstances = M.Dropdown.init(dropdowns, dropdownOptions);
+    });
+  </script>
+</body>
+</html>
 
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
