@@ -14,62 +14,53 @@
   <nav class="black" role="navigation">
     <div class="nav-wrapper container">
       <a id="logo-container" href="https://kryolite.io" class="brand-logo">KRYOLITE</a>
-      <ul class="right hide-on-med-and-down">
+      <ul class="right">
         <li>
-          <a class="dropdown-trigger" href="#" data-target="dropdown1">Menu<i class="material-icons right">arrow_drop_down</i></a>
-          <ul id="dropdown1" class="dropdown-content">
-            <li><a href="docs.html">Docs</a></li>
-            <li><a href="download.html">Downloads</a></li>
-            <li><a href="getstarted.html">Get Started</a></li>
-            <li><a href="https://kryolite-crypto.github.io/kryolottery/?address=kryo:5VX6ezNScRgzVurn3vVgosHsgpcqismWYm3o">Lottery</a></li>
-            <li><a href="https://kryolite-crypto.github.io/explorer/">Explorer</a></li>
+          <a class="dropdown-trigger" href="#" data-target="dropdown-menu">Menu<i class="material-icons right">arrow_drop_down</i></a>
+          <ul id="dropdown-menu" class="dropdown-content">
+            <li><a href="docs.html"><i class="material-icons left">description</i>Docs</a></li>
+            <li><a href="download.html"><i class="material-icons left">get_app</i>Downloads</a></li>
+            <li><a href="getstarted.html"><i class="material-icons left">play_circle_outline</i>Get Started</a></li>
+            <li><a href="https://kryolite-crypto.github.io/kryolottery/?address=kryo:5VX6ezNScRgzVurn3vVgosHsgpcqismWYm3o"><i class="material-icons left">casino</i>Lottery</a></li>
+            <li><a href="https://kryolite-crypto.github.io/explorer/"><i class="material-icons left">search</i>Explorer</a></li>            
           </ul>
         </li>
       </ul>
-      <a href="#" data-target="dropdown1" class="dropdown-trigger sidenav-trigger hide-on-large-only">Menu<i class="material-icons right">arrow_drop_down</i></i></a>
     </div>
   </nav>
 
-  <ul id="dropdown1" class="sidenav">
-    <li><a href="docs.html">Docs</a></li>
-    <li><a href="download.html">Downloads</a></li>
-    <li><a href="getstarted.html">Get Started</a></li>
-    <li><a href="https://kryolite-crypto.github.io/kryolottery/?address=kryo:5VX6ezNScRgzVurn3vVgosHsgpcqismWYm3o">Lottery</a></li>
-    <li><a href="https://kryolite-crypto.github.io/explorer/">Explorer</a></li>
-  </ul>
-
+  <!-- Include the Materialize JavaScript library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  
   <script>
-    // Initialize dropdown menu and sidenav
+    // Initialize dropdown menu
     document.addEventListener('DOMContentLoaded', function() {
       var dropdowns = document.querySelectorAll('.dropdown-trigger');
       var dropdownOptions = {
         inDuration: 300,
         outDuration: 225,
-        hover: true,
+        hover: false,
         coverTrigger: false,
         alignment: 'right',
         constrainWidth: false
       };
       var dropdownInstances = M.Dropdown.init(dropdowns, dropdownOptions);
-
-      var sidenavOptions = {
-        edge: 'right'
-      };
-      var sidenavInstances = M.Sidenav.init(document.querySelectorAll('.sidenav'), sidenavOptions);
     });
   </script>
+</body>
+</html>
+
 
   <div id="index-banner" class="parallax-container">
     <div class="section no-pad-bot">
       <div class="container">
         <br><br>
-        <h1 class="header center teal-text text-lighten-2">KRYOLITE 
-          ALPHA TESTNET IS LIVE</h1>
+        <h1 class="header center teal-text text-lighten-2">KRYOLITE CRYPTO</h1>
         <div class="row center">
           <h5 class="header col s12 light">A modern responsive C# based algorithm cryptocurrency featuring PoW and PoS functionality</h5>
         </div>
         <div class="row center">
-          <a href="https://discord.gg/QWJvKPuC" id="download-button" class="btn-large waves-effect waves-light teal lighten-1 discord-button">JOIN DISCORD</a>
+          <a href="https://discord.gg/QWJvKPuC" id="download-button" class="btn-large waves-effect waves-light teal lighten-1 discord-button" style="display: flex; align-items: center; justify-content: center;">JOIN DISCORD</a>
         </div>
         <br><br>
 
