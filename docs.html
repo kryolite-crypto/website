@@ -115,11 +115,11 @@
           <!-- Fixed port -->
           <h6 id="fixedport">Fixed port</h6>
           <p>To set fixed port, open <code>appsettings.json</code> and locate default endpoint configuration such as</p>
-          <pre><code>"Http4": {
+          <pre style="overflow-x: auto;"><code>"Http4": {
   "Url": "http://0.0.0.0:0"
 }</code></pre>
           <p>and change it to</p>
-          <pre><code>"Http4": {
+          <pre style="overflow-x: auto;"><code>"Http4": {
   "Url": "http://0.0.0.0:5000"
 }</code></pre>
           <p>Restart the node, and the new port will be used and announced to the network.</p>
@@ -129,7 +129,7 @@
           <!-- Localhost only access -->
           <h6 id="localhost">Localhost only access</h6>
           <p>To make your node listen to localhost only, open <code>appsettings.json</code> and change the endpoint URL to 127.0.0.1:</p>
-          <pre><code>"Http4": {
+          <pre style="overflow-x: auto;"><code>"Http4": {
   "Url": "http://127.0.0.1:0"
 }</code></pre>
           <p>You might also want to <a href="#publicurl">disable UPNP</a>.</p>
@@ -139,7 +139,7 @@
           <!-- Public URL -->
           <h6 id="publicurl">Public URL</h6>
           <p>If you have a public DNS A record for your node, use this property to broadcast it to other nodes. <b>This is required while using SSL.</b></p>
-          <pre><code>"PublicUrl": "https://testnet-1.kryolite.io"</code></pre>
+          <pre style="overflow-x: auto;"><code>"PublicUrl": "https://testnet-1.kryolite.io"</code></pre>
         </div>
               
         <div class="container z-depth-2">
@@ -171,7 +171,7 @@
           <!-- UPNP -->
           <h6 id="upnp">UPNP</h6>
           <p>UPNP is enabled by default. If you see UPNP-related errors during node startup, it might mean your router does not support UPNP or UPNP is disabled. You may disable UPNP in <code>appsettings.json</code></p>
-          <pre><code>"EnableUPNP": false</code></pre>
+          <pre style="overflow-x: auto;"><code>"EnableUPNP": false</code></pre>
         </div>
               
         <div class="container z-depth-2">
