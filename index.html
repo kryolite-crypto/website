@@ -1,182 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title>Kryolite</title>
-
-  <!-- CSS  -->
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/3b2b6ab1af.js" crossorigin="anonymous"></script>
+    <title>Kryolite</title>
 </head>
 <body>
-  <nav class="black" role="navigation">
-    <div class="nav-wrapper container">
-      <a id="logo-container" href="https://kryolite.io" class="brand-logo">KRYOLITE</a>
-      <ul class="right">
-        <li>
-          <a class="dropdown-trigger" href="#" data-target="dropdown-menu">Menu<i class="material-icons right">arrow_drop_down</i></a>
-          <ul id="dropdown-menu" class="dropdown-content">
-            <li><a href="docs.html"><i class="material-icons left">description</i>Docs</a></li>
-            <li><a href="download.html"><i class="material-icons left">get_app</i>Downloads</a></li>
-            <li><a href="getstarted.html"><i class="material-icons left">play_circle_outline</i>Get Started</a></li>
-            <li><a href="https://kryolite-crypto.github.io/kryolottery"><i class="material-icons left">casino</i>Lottery</a></li>
-            <li><a href="https://kryolite-crypto.github.io/explorer/"><i class="material-icons left">search</i>Explorer</a></li>            
-          </ul>
-        </li>
-      </ul>
+  <div class="background-container">
+    <div class="navbar">
+      <a href="docs.html">Docs</a>
+      <a href="download.html">Downloads</a>
+      <a href="https://kryolite-crypto.github.io/explorer">Explorer</a>
+      <a href="https://discord.gg/wfPRKJtrUP"><i class="fa-brands fa-discord"></i></a>
+      <a href="https://github.com/kryolite-crypto/kryolite"><i class="fa-brands fa-github"></i></a>
     </div>
-  </nav>
-
-  <!-- Include the Materialize JavaScript library -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-  
-  <script>
-    // Initialize dropdown menu
-    document.addEventListener('DOMContentLoaded', function() {
-      var dropdowns = document.querySelectorAll('.dropdown-trigger');
-      var dropdownOptions = {
-        inDuration: 300,
-        outDuration: 225,
-        hover: false,
-        coverTrigger: false,
-        alignment: 'right',
-        constrainWidth: false
-      };
-      var dropdownInstances = M.Dropdown.init(dropdowns, dropdownOptions);
-    });
-  </script>
+    <div class="textbox">
+      <div class="logo-text">KRYOLITE</div>
+      <div class="text-under-logo">
+        <div>CRYPTOCURRENCY WRITTEN FROM SCRATCH</div>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <a class="btn-5" href="getstarted.html">GET STARTED</a>
+      </div>
+    </div>
+    <div class="featuring">
+      <div>FEATURING</div>
+      <div>MINING | NOVEL ALGORITHM | STAKING | SMART CONTRACTS</div>
+    </div>
+    <div class="stars"></div>
+    <div class="twinkling"></div>
+    <div class="clouds"></div>
+  </div>
 </body>
-</html>
-
-
-  <div id="index-banner" class="parallax-container">
-    <div class="section no-pad-bot">
-      <div class="container">
-        <br><br>
-        <h1 class="header center teal-text text-lighten-2">KRYOLITE CRYPTO</h1>
-        <div class="row center">
-          <h5 class="header col s12 light">A modern responsive C# based algorithm cryptocurrency featuring PoW and PoS functionality</h5>
-        </div>
-        <div class="row center">
-          <a href="https://discord.gg/wfPRKJtrUP" id="download-button" class="btn-large waves-effect waves-light teal lighten-1 discord-button" style="display: flex; align-items: center; justify-content: center;">JOIN DISCORD</a>
-        </div>
-        <br><br>
-
-      </div>
-    </div>
-    <div class="parallax"><img src="background1.jpg" alt="Unsplashed background img 1"></div>
-  </div>
-
-
-  <div class="container">
-    <div class="section">
-
-      <!--   Icon Section   -->
-      <div class="row">
-        <div class="col s12 m4">
-          <div class="icon-block">
-            <h2 class="center brown-text"><i class="material-icons">flash_on</i></h2>
-            <h5 class="center">Active development</h5>
-
-            <p class="light">We do most of the heavy lifting. Our team of active developers are daily updating the codebase for a seamless experience.</p>
-          </div>
-        </div>
-
-        <div class="col s12 m4">
-          <div class="icon-block">
-            <h2 class="center brown-text"><i class="material-icons">group</i></h2>
-            <h5 class="center">User Experience Focused</h5>
-
-            <p class="light">Built for ease of use and as an all in one solution.</p>
-          </div>
-        </div>
-
-        <div class="col s12 m4">
-          <div class="icon-block">
-            <h2 class="center brown-text"><i class="material-icons">settings</i></h2>
-            <h5 class="center">CURRENT STATE - TESTNET ALPHA</h5>
-
-            <p class="light"><b>WARNING</b> This is experimental project. There will be issues and
-              testnet will be rolled back as needed. API should be considered unstable
-              and subject to change.</p>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-
-
-  <div class="parallax-container valign-wrapper">
-    <div class="section no-pad-bot">
-      <div class="container">
-        <div class="row center">
-          <h5 class="header col s12 light">Designed from the ground up as a modern solution, this is not a fork to try to duplicate functions.</h5>
-        </div>
-      </div>
-    </div>
-    <div class="parallax"><img src="background2.jpg" alt="Unsplashed background img 2"></div>
-  </div>
-
-  <div class="container">
-    <div class="section">
-
-      <div class="row">
-        <div class="col s12 center">
-          <h3><i class="mdi-content-send brown-text"></i></h3>
-          <h4>Contact Us</h4>
-          <p class="light">For any and all questions please us our discord link.  This makes it easier for us to track issues, suggestions, and announcements all in one place.</p>
-        </div>
-      </div>
-
-    </div>
-  </div>
-
-
-  <div class="parallax-container valign-wrapper">
-    <div class="section no-pad-bot">
-      <div class="container">
-        <div class="row center">
-          <h5 class="header col s12 light">Designed to break to norms and push the limits of current blockchains.</h5>
-        </div>
-      </div>
-    </div>
-    <div class="parallax"><img src="background3.jpg" alt="Unsplashed background img 3"></div>
-  </div>
-
-  <footer class="page-footer black">
-    <div class="container">
-      <div class="row">
-        <div class="col l6 s12">
-            <h5 class="white-text">Connect</h5>
-            <ul>
-              <li><a class="white-text" href="https://discord.gg/wfPRKJtrUP">Discord</a></li>
-              <li><a class="white-text" href="https://github.com/kryolite-crypto/kryolite">Github</a></li>
-            </ul>
-
-        </div>
-        <div class="col l3 s12">
-
-        </div>
-        <div class="col l3 s12">
-
-        </div>
-      </div>
-    </div-->
-    <!--div class="footer-copyright">
-      <div class="container">
-      Made by <a class="brown-text text-lighten-3" href="http://kryolite.io">Kryolite</a>
-      </div>
-    </div-->
-  </footer>
-
-
-  <!--  Scripts-->
-  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-  <script src="js/materialize.js"></script>
-  <script src="js/init.js"></script>
-
-  </body>
 </html>

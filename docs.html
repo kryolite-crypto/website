@@ -6,7 +6,7 @@
   <title>Kryolite</title>
 
   <!-- CSS  -->
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/3b2b6ab1af.js" crossorigin="anonymous"></script>
   <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
 </head>
@@ -16,13 +16,12 @@
       <a id="logo-container" href="https://kryolite.io" class="brand-logo">KRYOLITE</a>
       <ul class="right">
         <li>
-          <a class="dropdown-trigger" href="#" data-target="dropdown-menu">Menu<i class="material-icons right">arrow_drop_down</i></a>
+          <a class="dropdown-trigger" href="#" data-target="dropdown-menu">Links <i style="font-size: 14px" class="fa-solid fa-chevron-down"></i></a>
           <ul id="dropdown-menu" class="dropdown-content">
-            <li><a href="docs.html"><i class="material-icons left">description</i>Docs</a></li>
-            <li><a href="download.html"><i class="material-icons left">get_app</i>Downloads</a></li>
-            <li><a href="getstarted.html"><i class="material-icons left">play_circle_outline</i>Get Started</a></li>
-            <li><a href="https://kryolite-crypto.github.io/kryolottery"><i class="material-icons left">casino</i>Lottery</a></li>
-            <li><a href="https://kryolite-crypto.github.io/explorer/"><i class="material-icons left">search</i>Explorer</a></li>            
+            <li><a href="docs.html">Docs</a></li>
+            <li><a href="download.html">Downloads</a></li>
+            <li><a href="getstarted.html">Get Started</a></li>
+            <li><a href="https://kryolite-crypto.github.io/explorer/">Explorer</a></li>         
           </ul>
         </li>
       </ul>
@@ -60,12 +59,36 @@
   <head>
     <style>
       body {
-        background-color: #1c1c1c; /* Set the background color to a dark shade */
-        color: #ffffff; /* Set the text color to white */
+        background-color: #1c1c1c;
+        color: #ffffff;
       }
-  
+
+      pre {
+        overflow-x: auto;
+        padding: 5px;
+      }
+
       a {
         color: #07a151; /* Set the color of links to white */
+      }
+
+      .collection-item:hover {
+        background-color: #575757 !important;
+      }
+
+      .container {
+        margin-bottom: 50px;
+      }
+
+      @media only screen and (min-width: 993px) {
+        .container {
+          width: 100%;
+        }
+      }
+      @media only screen and (min-width: 601px) {
+        .container {
+          width: 100%;
+        }
       }
   
       /* Override Materialize CSS classes for dark theme */
@@ -76,6 +99,16 @@
       .card-title, .card-content {
         color: #ffffff;
       }
+
+      .collection-header {
+        padding: 5px;
+        border-bottom: 1px solid #e0e0e0 !important;
+      }
+
+      .collection-item {
+        color: white !important;
+        background-color: #1c1c1c !important;
+      }
     </style>
   </head>
 
@@ -84,7 +117,7 @@
       <div class="row">
         <div class="col s12 m3 l3">
           <div class="collection">
-            <p class="collection-header">Node</p>
+            <div class="collection-header">Node</div>
             <a href="#endpointconfiguration" class="collection-item">Endpoint Configuration</a>
             <a href="#fixedport" class="collection-item">Fixed Port</a>
             <a href="#localhost" class="collection-item">Localhost only access</a>
@@ -94,24 +127,24 @@
             <a href="#upnp" class="collection-item">UPNP</a>
           </div>
           <div class="collection">
-            <p class="collection-header">Miner</p>
+            <div class="collection-header">Miner</div>
             <a href="#minersettings" class="collection-item">Settings</a>
           </div>
         </div>
         <div class="col s12 m9 l9" style="margin-bottom: 100px;">      
-        <div class="container z-depth-2">
+        <div class="container">
           <!-- Node -->
           <h4 id="node">Node</h4>
           <p>Node refers to daemon or wallet. By default node assigns free port automatically and tries to open incoming port using UPNP.</p>
         </div>
               
-        <div class="container z-depth-2">
+        <div class="container">
           <!-- Endpoint configuration -->
           <h5 id="endpointconfiguration">Endpoint configuration</h5>
           <p>Node uses standard <a href="https://learn.microsoft.com/en-us/aspnet/core/fundamentals/servers/kestrel/endpoints?view=aspnetcore-7.0#configureiconfiguration">.NET endpoint configuration parameters</a> defined in <code>appsettings.json</code>. Multiple endpoints can be used each with different ip address binding.</p>
         </div>
               
-        <div class="container z-depth-2">
+        <div class="container">
           <!-- Fixed port -->
           <h6 id="fixedport">Fixed port</h6>
           <p>To set fixed port, open <code>appsettings.json</code> and locate default endpoint configuration such as</p>
@@ -125,30 +158,30 @@
           <p>Restart the node, and the new port will be used and announced to the network.</p>
         </div>
               
-        <div class="container z-depth-2">
+        <div class="container">
           <!-- Localhost only access -->
           <h6 id="localhost">Localhost only access</h6>
-          <p>To make your node listen to localhost only, open <code>appsettings.json</code> and change the endpoint URL to 127.0.0.1:</p>
+          <p>To make your node to listen localhost only, open <code>appsettings.json</code> and change the endpoint URL to 127.0.0.1:</p>
           <pre style="overflow-x: auto;"><code>"Http4": {
   "Url": "http://127.0.0.1:0"
 }</code></pre>
           <p>You might also want to <a href="#publicurl">disable UPNP</a>.</p>
         </div>
         
-        <div class="container z-depth-2">
+        <div class="container">
           <!-- Public URL -->
           <h6 id="publicurl">Public URL</h6>
           <p>If you have a public DNS A record for your node, use this property to broadcast it to other nodes. <b>This is required while using SSL.</b></p>
           <pre style="overflow-x: auto;"><code>"PublicUrl": "https://testnet-1.kryolite.io"</code></pre>
         </div>
               
-        <div class="container z-depth-2">
+        <div class="container">
           <!-- SSL Configuration -->
           <h5 id="ssl">SSL Configuration</h5>
           <p>For SSL Configuration, you need to set the Public URL to match the Subject Name in the certificate. <a href="https://learn.microsoft.com/en-us/aspnet/core/fundamentals/servers/kestrel/endpoints?view=aspnetcore-7.0#replace-the-default-certificate-from-configuration">Certificate needs to be configured in appsettings.json</a></p>
         </div>
               
-        <div class="container z-depth-2 custom-container">
+        <div class="container custom-container">
           <!-- Let's Encrypt -->
           <h6 id="letsencrypt">Let's Encrypt</h6>
           <p>Node also has built-in support for Let's Encrypt certificates with <a href="https://github.com/natemcmaster/LettuceEncrypt">LettuceEncrypt</a> library.
@@ -167,20 +200,20 @@
           <p>DomainNames parameter must match <code>PublicUrl</code>.</p>
         </div>
               
-        <div class="container z-depth-2">
+        <div class="container">
           <!-- UPNP -->
           <h6 id="upnp">UPNP</h6>
           <p>UPNP is enabled by default. If you see UPNP-related errors during node startup, it might mean your router does not support UPNP or UPNP is disabled. You may disable UPNP in <code>appsettings.json</code></p>
           <pre style="overflow-x: auto;"><code>"EnableUPNP": false</code></pre>
         </div>
               
-        <div class="container z-depth-2">
+        <div class="container">
           <!-- Miner -->
           <h4 id="miner">Miner</h4>
           <p>By default, the miner uses mDNS autodiscovery to find a node to mine against.</p>
         </div>
               
-        <div class="container z-depth-2">
+        <div class="container">
           <!-- Miner Settings -->
           <h5 id="minersettings">Settings</h5>
           <p>

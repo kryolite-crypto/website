@@ -6,7 +6,7 @@
   <title>Kryolite</title>
 
   <!-- CSS  -->
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/3b2b6ab1af.js" crossorigin="anonymous"></script>
   <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
 </head>
@@ -16,13 +16,12 @@
       <a id="logo-container" href="https://kryolite.io" class="brand-logo">KRYOLITE</a>
       <ul class="right">
         <li>
-          <a class="dropdown-trigger" href="#" data-target="dropdown-menu">Menu<i class="material-icons right">arrow_drop_down</i></a>
+          <a class="dropdown-trigger" href="#" data-target="dropdown-menu">Links <i style="font-size: 14px" class="fa-solid fa-chevron-down"></i></a>
           <ul id="dropdown-menu" class="dropdown-content">
-            <li><a href="docs.html"><i class="material-icons left">description</i>Docs</a></li>
-            <li><a href="download.html"><i class="material-icons left">get_app</i>Downloads</a></li>
-            <li><a href="getstarted.html"><i class="material-icons left">play_circle_outline</i>Get Started</a></li>
-            <li><a href="https://kryolite-crypto.github.io/kryolottery"><i class="material-icons left">casino</i>Lottery</a></li>
-            <li><a href="https://kryolite-crypto.github.io/explorer/"><i class="material-icons left">search</i>Explorer</a></li>            
+            <li><a href="docs.html">Docs</a></li>
+            <li><a href="download.html">Downloads</a></li>
+            <li><a href="getstarted.html">Get Started</a></li>
+            <li><a href="https://kryolite-crypto.github.io/explorer/">Explorer</a></li>
           </ul>
         </li>
       </ul>
@@ -79,29 +78,25 @@
 
   <body>
     <section>
-      <div class="container z-depth-2">
+      <div class="container">
         <div class="row">
           <div class="col s12">
-            <h4 class="m-t-25">How-to mine in 5 steps?</h4>
+            <h4 class="m-t-25">How-to mine in 4 steps?</h4>
             <ol>
               <li>
-                <a href="download.html">Download</a> wallet and miner for your platform
+                <a href="download.html">Download</a> wallet for you platform
               </li>
-              <li>Launch wallet</li>
-              <li>Go to addresses tab</li>
-              <li>Right click on pre-generated address to copy the address</li>
-              <li>
-                Keep wallet running and launch miner with command
-                <pre style="overflow-x: auto;"><code>kryolite-miner --address kryo:5VWDAcZPXZRPJzBncuUCyeCVgJoEoDz7tWeB</code></pre>
-                </blockquote>
-              </li>
+              <li>Launch wallet and go to "Addresses" tab</li>
+              <li>Create new address by clicking on "New Address"</li>
+              <li>Go to mining tab and click "Start mining"</li>
+              <li>(Optional) <a href="https://discord.gg/wfPRKJtrUP">Join our Discord</a></li>
             </ol>
           </div>
         </div>
       </div>
     </section>
 
-    <section>
+    <section style="position: absolute; bottom: 5px;">
       <div class="container">
         <div class="card-panel red white-text">
           <b>WARNING</b> This is an experimental project. There will be issues and testnet will be rolled back as needed. API should be considered unstable and subject to change.
